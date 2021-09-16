@@ -1,0 +1,16 @@
+{
+  "name": "vyex-bot",
+  "version": "1.0.0",
+  "description": "Bot that posts random stuff to twitter.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "author": "alanfvn",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "twitter-api-v2": "^1.5.1"
+  }
+}

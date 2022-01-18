@@ -1,9 +1,5 @@
-const {startTweetSchedule} = require('./twitter/tw_util')
-const {loadWords} = require('./util/words_util')
+const {start_tweet_schedule} = require('./twitter/tw_util')
 
 
-loadWords().then(()=>{
-    startTweetSchedule();
-});
-
-
+console.log('Started tweeting stuff!')
+start_tweet_schedule();

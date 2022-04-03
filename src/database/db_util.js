@@ -1,11 +1,9 @@
 const {Client} = require('pg');
-const table = 'vyexbot';
 
 const client = new Client({
-    connectionString: process.env.database_url,
+    connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false }
 });
-
 
 /*
     ngl this feels a bit hacky

@@ -16,9 +16,7 @@ const client = new Client({
 async function get_words(amount){
     await client.connect()
     const words = await client.query(
-        `select word_id, word from (select floor(random()*(select count(*) from ${table})+1) `+
-        `as  row_number from generate_series(1, ${amount})) rwr join (select *, row_number() over () `+
-        `from ${table}) original using (row_number)`
+        `select * from get_random_word(${amount})`
     )
     //query: https://stackoverflow.com/a/23897463
     await client.end()

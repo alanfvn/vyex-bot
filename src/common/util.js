@@ -9,7 +9,9 @@ async function get_images(urls){
     const images = [];
     
     for(let url of urlSet){
-        const response = await axios.get(url, {responseType: 'arraybuffer'});
+        const response = await axios.get(url, {
+            responseType: 'arraybuffer'
+        });
         images.push(Buffer.from(response.data))
     }
     return images;

@@ -3,10 +3,10 @@ const {gen_sentence} = require('../common/words_util')
 const {get_images} = require('../common/util')
 
 const client = new TwitterApi({
-    appKey: process.env.key,
-    appSecret: process.env.secret,
-    accessToken: process.env.token,
-    accessSecret: process.env.token_secret,
+    appKey: process.env.KEY,
+    appSecret: process.env.SECRET,
+    accessToken: process.env.TOKEN,
+    accessSecret: process.env.TOKEN_SECRET,
 })
 
 function start_tweet_schedule(){

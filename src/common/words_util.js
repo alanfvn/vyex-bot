@@ -9,7 +9,7 @@ const {get_words} = require('../database/db_util');
 */
 async function gen_sentence(){
     const rndm = random_num(1, 10);
-    const words = (await get_words(rndm)).map(x=>x.word);
+    const words = (await get_words(rndm)).map(x=>x.wrd);
     const phrase = words.join(' ');
 
     const _urls = get_urls(phrase);
